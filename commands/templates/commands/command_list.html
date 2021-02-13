@@ -1,0 +1,7 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+    {% for i in command_list %}
+        <li> <a href="{% url 'command' i.command_name %}"> {{i}} </a> </li>
+    {% endfor %}
+{% endblock %}
