@@ -13,7 +13,7 @@ def commands_view(request):
 def command_view(request, command_name_url):
     command_profile_object = Command.objects.get(command_name=command_name_url)
     profile = {
-        "command_profile_object_name":command_profile_object.command_name,
-        "command_profile_object_members":command_profile_object.group_members.all(),
+        "command_profile_object_name": command_profile_object.command_name,
+        "command_profile_object_members": command_profile_object.group_members.all(),
     }
     return render(request, "commands/command_profile.html", profile)
