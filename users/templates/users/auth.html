@@ -1,7 +1,7 @@
 {% extends 'homepage/base.html' %}
 
 {% block content %}
-<form action="users.user_profile.html">
+<form action="{% url 'profile_view'  %}" method="POST"> {% csrf_token %}
     {{ form.as_p}}
     <input type="submit", value="Save"/>
 </form>
